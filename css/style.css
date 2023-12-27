@@ -10,10 +10,11 @@ body {
 
 .navigation {
   height: 100px;
-  background: linear-gradient(to bottom, #FE77A6 80%, #674d8e 20%)
+  background: linear-gradient(to bottom, #FE77A6 80% , #674d8e 20% );
 }
 
-.brand {
+.brand 
+{
   position: absolute;
   padding-left: 20px;
   float: left;
@@ -51,12 +52,13 @@ nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  margin-left: 100px;
 }
 
 nav ul li {
   float: left;
   position: relative;
-  margin-right: 1rem;
+  margin-right: rem;
 }
 
 nav ul li a,
@@ -76,13 +78,14 @@ nav ul li a {
   line-height: 60px;
   position: relative;
   margin-top: 10px;
+  font-size: 18px;
   margin-right: 1rem;
 }
 
 nav ul li a:hover,
 nav ul li a:visited:hover {
-  background: #2581DC;
-  color: #ffffff;
+  color: #2581DC;
+  /* color: #ffffff; */
 }
 
 .navbar-dropdown li a {
@@ -130,7 +133,9 @@ nav ul li ul li a {
 
   nav {
     width: 100%;
-    padding: 55px 0 15px;
+    /* padding: 55px 0 15px; */
+    padding: 5px 30px;
+    padding-left: 50px;
   }
 
   nav ul {
@@ -213,7 +218,10 @@ nav ul li ul li a {
     transform: rotate(-45deg);
   }
 }
-
+.carousel-item
+{
+  width: 100%;
+}
 .carousel-item>img {
   width: 100%;
   height: 75vh;
@@ -432,8 +440,10 @@ butto:focus{
   font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; } */
 
 p {
-  color: #b3b3b3;
+  
+  color: #efdddd;
   font-weight: 300;
+
 }
 
 h1,
@@ -538,5 +548,65 @@ h2 {
     height: 80px;
     margin-left: 20px;
   }
+ 
 
 }
+
+
+
+#foot
+{
+    justify-content: space-between;
+    display: flex;
+    padding: 5px 70px;
+}
+.foot2 ul li i 
+{
+  color: #007bff;
+}
+
+
+/* 
+@media (max-width: 767px) 
+{
+ .main_footer
+ {
+     background-color: #333;
+ }
+ 
+  footer 
+  {
+     background-color: #333;
+  }
+  #foot {
+    flex-direction: column;
+    align-items: center; 
+    padding: 20px;
+    
+   
+  }
+
+  .foot2 
+  {
+    text-align: center;
+    margin-top: 20px; 
+  }
+
+  #foot3 {
+    margin-top: 20px; 
+    text-align: center; 
+  }
+
+  .b_part {
+    background-color: #333; 
+ 
+  
+    padding: 10px; 
+    text-align: center; 
+  }
+
+  .foot2 ul li i {
+    color: #007bff; 
+  }
+}
+  */

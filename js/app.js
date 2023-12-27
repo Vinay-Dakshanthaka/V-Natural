@@ -1,5 +1,6 @@
 (function($) { 
-    $(function() { 
+    $(function() 
+    { 
 
         // Open and close nav on hover
         $('#navbar-toggle').hover(function() {
@@ -7,7 +8,8 @@
         });
 
         // Hamburger toggle on hover
-        $('#navbar-toggle').on('mouseenter', function() {
+        $('#navbar-toggle').on('mouseenter', function() 
+        {
             this.classList.toggle('active');
         });
 
@@ -236,7 +238,8 @@ function showProducts(category) {
   
   
   // Function to show the zoom modal
-  function openZoomModal(imageSrc) {
+  function openZoomModal(imageSrc) 
+  {
         const modal = document.getElementById('zoom-modal');
         const modalImg = document.getElementById('modal-img');
   
