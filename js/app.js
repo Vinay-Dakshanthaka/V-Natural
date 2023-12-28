@@ -93,38 +93,38 @@ const products = {
         category: "generalCare"
     },
 
-    {
-      id:8,
-      name: "Watermelon Nose Stripes",
-      image: "./img/watermelon-nose-stripes.png",
-      description:
-        "\nProduct Code: \nPackaging: \nMRP: ",
-        category: "faceCare"
-    },
-    {
-      id:9,
-      name: "Luxary Bath Loofah",
-      image: "./img/luxary-bath-loofah.png",
-      description:
-        " \nProduct Code: \nPackaging: \nMRP: ",
-        category: "generalCare"
-    },
-    {
-      id:10,
-      name: "Premium Delux Napkins",
-      image: "./img/premium-delux-napkins.png",
-      description:
-        " \nProduct Code: \nPackaging: \nMRP: ",
-        category: "generalCare"
-    },
-    {
-      id:11,
-      name: "Coffee Nose Stripes",
-      image: "./img/coffee-nose-stripes.png",
-      description:
-        "\nProduct Code: \nPackaging: \nMRP: ",
-        category: "faceCare"
-    },
+    // {
+    //   id:8,
+    //   name: "Watermelon Nose Stripes",
+    //   image: "./img/watermelon-nose-stripes.png",
+    //   description:
+    //     "\nProduct Code: \nPackaging: \nMRP: ",
+    //     category: "faceCare"
+    // },
+    // {
+    //   id:9,
+    //   name: "Luxary Bath Loofah",
+    //   image: "./img/luxary-bath-loofah.png",
+    //   description:
+    //     " \nProduct Code: \nPackaging: \nMRP: ",
+    //     category: "generalCare"
+    // },
+    // {
+    //   id:10,
+    //   name: "Premium Delux Napkins",
+    //   image: "./img/premium-delux-napkins.png",
+    //   description:
+    //     " \nProduct Code: \nPackaging: \nMRP: ",
+    //     category: "generalCare"
+    // },
+    // {
+    //   id:11,
+    //   name: "Coffee Nose Stripes",
+    //   image: "./img/coffee-nose-stripes.png",
+    //   description:
+    //     "\nProduct Code: \nPackaging: \nMRP: ",
+    //     category: "faceCare"
+    // },
   ],
 };
 

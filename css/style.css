@@ -414,6 +414,7 @@ button:focus{
     min-width: 80%;
     object-fit: contain;
     height: auto;
+    border: none;
   }
 
   .product-card img {
