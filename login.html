@@ -199,8 +199,14 @@
         <i class="far fa-eye password-toggle" id="passwordToggle"></i>
       </div>
       <span id="passwordError" style="color: red;"></span><br><br>
+      <p class="text-left"> <a href="./forgot-password.html" class="p-3">Forgot Password</a></p>
+  
 
-      <input type="submit" value="Submit">
+      <div class="w-100 d-flex align-items-center justify-content-center">
+        <input type="submit" value="Submit" style="max-width: 100%;" class="rounded-end-pill">
+      </div>
+      <br>
+
     </form>
   </section>
 
@@ -287,7 +293,7 @@
 
     // Function to toggle password visibility
     document.getElementById("passwordToggle").addEventListener("click", function () {
-      var passwordInput = document.getElementById("exampleInputPassword1");
+      var passwordInput = document.getElementById("password");
       if (passwordInput.type === "password") {
         passwordInput.type = "text";
       } else {
@@ -296,18 +302,20 @@
     });
 
 
-
     function validateForm() {
-      var email = document.getElementById("exampleInputEmail1").value;
-      var password = document.getElementById("exampleInputPassword1").value;
+      var email = document.getElementById("email").value;
+      var password = document.getElementById("password").value;
 
       if (!email || !isValidEmail(email)) {
-        alert("Please enter a valid email address.");
+        // alert("Please enter a valid email address.");
+        document.getElementById("emailError").innerText = "invalid email"
         return false;
       }
 
       if (!password || password.length < 6) {
-        alert("Password must be at least 6 characters long.");
+        // alert("Password must be at least 6 characters long.");
+        document.getElementById("passwordError").innerText =" Passowrd must be at least 6 characters"
+
         return false;
       }
 
