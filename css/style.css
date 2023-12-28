@@ -698,3 +698,14 @@ h2 {
   }
 
 }
+
+#foot
+{
+    justify-content: space-between;
+    display: flex;
+    padding: 5px 70px;
+}
+.foot2 ul li i 
+{
+  color: #007bff;
+}
