@@ -26,6 +26,14 @@
   });
 })(jQuery);
 
+
+// hamburger menu toggler
+document.getElementById('navbar-toggle').addEventListener('click', function () {
+  var navList = document.querySelector('.nav-list');
+  navList.classList.toggle('show');
+  this.classList.toggle('active');
+});
+
 // Filter Products
 
 const products = {

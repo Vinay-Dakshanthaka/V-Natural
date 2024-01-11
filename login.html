@@ -56,6 +56,7 @@
       flex: 1;
       max-width: 600px;
       margin-right: 20px;
+      /* z-index: 100; */
     }
 
     label {
@@ -141,9 +142,6 @@
       transform: translateY(-50%);
       cursor: pointer;
     }
-
-
-    
     }
   </style>
 
@@ -156,27 +154,22 @@
   <section class="navigation">
     <div class="nav-container">
       <div class="brand">
-        <a href="./index.html"><img src="./img/logo.png" alt="" width="120px" height="80px"></a>
+        <a href="./index.html"><img src="./img/logo.png" alt=""></a>
       </div>
       <nav>
-        <div class="nav-mobile"><a id="navbar-toggle" href="#!"><span></span></a></div>
+        <div class="nav-mobile" id="navbar-toggle">
+          <div class="hamburger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
         <ul class="nav-list">
-          <li>
-            <a href="./index.html">Home</a>
-          </li>
-          <li>
-            <a href="./about.html">About Us</a>
-          </li>
-          <li>
-            <a href="./products.html">Products</a>
-          </li>
-          <li>
-            <a href="./contactus.html">Contact Us</a>
-          </li>
-          </li>
-          <li>
-            <a href="./login.html">Login</a>
-          </li>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about.html">About Us</a></li>
+          <li><a href="./products.html">Products</a></li>
+          <li><a href="./contactus.html">Contact Us</a></li>
+          <li><a href="./login.html">Login</a></li>
         </ul>
       </nav>
     </div>
@@ -185,7 +178,7 @@
   <h1 class="contact" style="text-align: center;margin-top: 25px;">Login </h1>
   </header>
 
-  <section id="contactForm" style="pointer-events: none;">
+  <section id="contactForm">
     <form action="#" method="post" onsubmit="return validateForm()">
       <label for="email">Email:</label>
      
