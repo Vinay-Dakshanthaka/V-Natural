@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Home</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"  crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/style.css">
+
+    <style>
+        .admin-profile-title{
+            font-size: 2.5rem;
+            border: none;
+        }
+        .custom-btn{
+            background-image: linear-gradient(to right, #FFC0CB, #0000FF);
+            border: 1px solid black;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+
+<body id="section_1">
+    <section class="navigation">
+        <div class="nav-container">
+            <div class="brand">
+                <a href="./index.html"><img src="./img/logo.png" alt=""></a>
+            </div>
+            <nav>
+                <div class="nav-mobile" id="navbar-toggle">
+                    <div class="hamburger-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <ul class="nav-list">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./about.html">About Us</a></li>
+                    <li><a href="./products.html">Products</a></li>
+                    <li><a href="./contactus.html">Contact Us</a></li>
+                    <li><a href="./login.html">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <div class="drop drop-1"></div>
+    <div class="container mt-5">
+        <h1 class="admin-profile-title text-center">Admin Profile</h1>
+
+        <div class="row justify-content-center align-items-center">
+            <div class="col-md-4 card d-flex flex-column align-items-center justify-content-center border-0 bg-transparent"
+                style="width: 60%;">
+
+                <div class="text-center mb-2">
+                    <div class="rounded  profile-picture-container " style="width: 200px; height: 200px;">
+                        <img src="./img/editor-img.png" alt="Profile Picture" class="img-fluid rounded-circle"
+                            style="width: 100%; height: 100%;">
+                    </div>
+                </div>
+                <p class="text-black">Profile Picture</p>
+                <label for="fileInput" class="custom-btn btn-primary btn-sm">
+                    Select Image
+                </label>
+                <input type="file" id="fileInput" class="d-none" accept="image/*">
+
+                <p id="selectedFileName" class="mt-2"></p>
+            </div>
+
+            <div class="col-12 col-md-8 mb-5 card bg-transparent border-0">
+                <h4 class="mt-3 border-bottom">Account Details</h4>
+
+                <form class="p-3 form">
+                    <div class="form-group mb-2">
+                        <label for="name">Name:</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                    </div>
+
+                    <div class="form-group mb-2">
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number">
+                    </div>
+
+                    <div class="form-group mb-2">
+                        <label for="email">Email Address:</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email address">
+                    </div>
+
+                    <div class="d-flex justify-content-between">
+                        <button type="button" class="custom-btn btn-primary btn-sm mt-3">Save Changes</button>
+                        <button type="button" class="custom-btn btn-primary btn-sm mt-3" data-toggle="modal"
+                            data-target="#changePasswordModal">Change Password</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Change Password Modal -->
+    <div class="modal fade" id="changePasswordModal" tabindex="-1" role="dialog"
+        aria-labelledby="changePasswordModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="changePasswordModalLabel">Change Password</h5>
+                    <button type="button" class="close border-0" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="currentPassword">Current Password:</label>
+                            <div class="input-group">
+                                <input type="password" class="form-control" id="currentPassword"
+                                    placeholder="Enter current password">
+                                <div class="input-group-append">
+                                    <span class="input-group-text toggle-password"
+                                        onclick="togglePassword('currentPassword')">
+                                        <i class="bi bi-eye"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="newPassword">New Password:</label>
+                            <div class="input-group">
+                                <input type="password" class="form-control" id="newPassword"
+                                    placeholder="Enter new password">
+                                <div class="input-group-append">
+                                    <span class="input-group-text toggle-password"
+                                        onclick="togglePassword('newPassword')">
+                                        <i class="bi bi-eye"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="confirmPassword">Confirm Password:</label>
+                            <div class="input-group">
+                                <input type="password" class="form-control" id="confirmPassword"
+                                    placeholder="Confirm new password">
+                                <div class="input-group-append">
+                                    <span class="input-group-text toggle-password"
+                                        onclick="togglePassword('confirmPassword')">
+                                        <i class="bi bi-eye"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Change Password</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- footer -->
+    <section id="foott">
+        <footer class="bg-dark text-white main_footer">
+            <div class="container py-0">
+                <div class="row" id="foot">
+                    <!-- Column 1: Company Information -->
+                    <div class="col-lg-4 col-md-4 mt-4">
+                        <p class=""><img src="./img/logo.png" alt="" width="100px" height="70px"></p>
+                        <p>
+                            No. 1708, KH No. 1189,<br>
+                            5th cross, 6th main,<br>
+                            Shivaramiah layout,<br>
+                            Bengaluru-560043
+                        </p>
+                    </div>
+
+                    <!-- Column 2: Navigation -->
+                    <div class="col-lg-4 col-md-4 mt-5 foot2">
+                        <h5 style="color: #efdddd">Navigation</h5>
+                        <ul class="list-unstyled py-1">
+                            <li class="py-1">
+                                <i class="fa-solid fa-house" style="color: #efdddd;"></i>
+                                <a href="index.html">Home</a>
+                            </li>
+                            <li class="py-1">
+                                <i class="fa-solid fa-address-card" style="color: #efdddd;"></i>
+                                <a href="about.html">About Us</a>
+                            </li>
+                            <li class="py-1">
+                                <i class="fa-brands fa-product-hunt" style="color: #efdddd;"></i>
+                                <a href="products.html">Products</a>
+                            </li>
+                            <li class="py-1">
+                                <i class="fa-solid fa-phone" style="color: #efdddd;"></i>
+                                <a href="contactus.html">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 3: Copyright -->
+                    <div class="col-lg-4 col-md-4 mt-5" id="foot3">
+                        <a href="mailto:info@vnaturalproducts.com">
+                            <i class="fa-solid fa-envelope" style="color: #fff;"></i> info@vnaturalproducts.com<br>
+                            <span style="margin-top: 15px;"> <i class="fa-solid fa-phone" style="color:#fff;"></i> +91
+                                99011 04347
+                            </span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Copyright and Social Icons -->
+                <div class="row b_part">
+                    <div class="col-lg-12 col-md-12"
+                        style="text-align: center; color: #efdddd; padding: 3px 15px; font-size: 19px; ">
+                        <i class="fa-brands fa-facebook"></i>&nbsp;
+                        <i class="fa-brands fa-instagram"></i>&nbsp;
+                        <i class="fa-brands fa-twitter"></i>
+                    </div>
+                </div>
+
+                <!-- Copyright Text -->
+                <div class="row b_part">
+                    <div class="col-lg-12 col-md-12" style="text-align: center; padding: 3px 15px; font-size: 19px; ">
+                        <p style="margin-top: 10px;font-size: 14px;">&copy; 2023 V-Natural. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+    <script src="./js/app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+        function togglePassword(inputId) {
+            const passwordInput = document.getElementById(inputId);
+            const icon = passwordInput.nextElementSibling.querySelector('i');
+
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                icon.classList.remove('bi-eye');
+                icon.classList.add('bi-eye-slash');
+            } else {
+                passwordInput.type = "password";
+                icon.classList.remove('bi-eye-slash');
+                icon.classList.add('bi-eye');
+            }
+        }
+    </script>
+</body>
+
+</html>
