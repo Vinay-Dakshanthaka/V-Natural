@@ -39,7 +39,8 @@ body {
 .navigation {
   background: linear-gradient(to bottom, #fe77a6 80%, #41b2db 20%);
   color: #fff;
-  padding: 10px 0;
+  padding-top: 5px;
+  height: 100px;
 }
 
 .nav-container {
@@ -110,7 +111,7 @@ nav {
     left: 0;
     right: 0;
     background: #fe77a6;
-    z-index: 1;
+    z-index: 100;
   }
 
   .nav-list.show {
@@ -262,7 +263,22 @@ nav {
   width: 40%;
   border: 1px solid #e0dddd;
 }
-
+@media (max-width:568px){
+  #carousel .carousel-inner{
+    max-height: 100%;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    border: none;
+  }
+  
+  #carousel .carousel-inner img {
+    min-height: 250px !important;
+    max-height: 250px !important;
+    object-fit: fill;
+    border: none	;
+  }
+}
 .button-container button {
   /* margin: 5px; */
   border: none;
